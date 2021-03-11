@@ -1,0 +1,153 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "resistor calculator",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "CaptureResistorInfoIntent",
+          "slots": [
+            {
+              "name": "colors",
+              "type": "AMAZON.Color",
+              "samples": [
+                "the colors are {colors}",
+                "{colors}"
+              ],
+              "multipleValues": {
+                "enabled": true
+              }
+            }
+          ],
+          "samples": [
+            "{colors}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "black"
+              }
+            },
+            {
+              "name": {
+                "value": "brown",
+                "synonyms": [
+                  "tan"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "red"
+              }
+            },
+            {
+              "name": {
+                "value": "orange"
+              }
+            },
+            {
+              "name": {
+                "value": "yellow"
+              }
+            },
+            {
+              "name": {
+                "value": "green"
+              }
+            },
+            {
+              "name": {
+                "value": "blue"
+              }
+            },
+            {
+              "name": {
+                "value": "purple",
+                "synonyms": [
+                  "violet"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "grey"
+              }
+            },
+            {
+              "name": {
+                "value": "white"
+              }
+            },
+            {
+              "name": {
+                "value": "gold",
+                "synonyms": [
+                  "bronze"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "silver"
+              }
+            }
+          ],
+          "name": "AMAZON.Color"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CaptureResistorInfoIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "colors",
+              "type": "AMAZON.Color",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.547297596505.1538612643009"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.547297596505.1538612643009",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what are the band colors?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "10"
+}
